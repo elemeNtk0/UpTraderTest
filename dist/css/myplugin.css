@@ -9,3 +9,17 @@
 body {
   background: red;
 }
+
+/* line 6, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+html {
+  max-width: 100%;
+}
+
+/* line 10, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid black;
+}
