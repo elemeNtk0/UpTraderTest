@@ -1,11 +1,10 @@
 {
-	"name": "gulp-boilerplate",
-	"version": "5.0.0",
-	"description": "My Gulp.js boilerplate for creating new web projects",
+	"name": "Test for UpTrader",
+	"version": "1.0.0",
+	"description": "My Test project for UpTrader Company",
 	"main": "./dist/js/myplugin.min.js",
 	"author": {
-		"name": "Chris Ferdinandi",
-		"url": "http://gomakethings.com"
+		"name": "Alexander Senchenko"
 	},
 	"license": "MIT",
 	"repository": {
