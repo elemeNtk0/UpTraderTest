@@ -18,8 +18,6 @@ var livereload = require('gulp-livereload');
 var package = require('./package.json');
 
 // Scripts and tests
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var karma = require('gulp-karma');
@@ -47,7 +45,6 @@ var paths = {
     output: 'dist/',
     scripts: {
         input: 'src/js/*',
-        lint: 'src/js/**',
         output: 'dist/js/'
     },
     styles: {
@@ -65,13 +62,6 @@ var paths = {
     static: {
         input: 'src/static/*',
         output: 'dist/'
-    },
-    test: {
-        input: 'src/js/**/*.js',
-        karma: 'test/karma.conf.js',
-        spec: 'test/spec/**/*.js',
-        coverage: 'test/coverage/',
-        results: 'test/results/'
     },
     docs: {
         input: 'src/docs/*.{html,md,markdown}',
@@ -194,35 +184,11 @@ gulp.task('build:static', ['clean:dist'], function() {
         .pipe(gulp.dest(paths.static.output));
 });
 
-// Lint scripts
-gulp.task('lint:scripts', function () {
-    return gulp.src(paths.scripts.lint)
-        .pipe(plumber())
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
-});
-
 // Remove pre-existing content from output and test folders
 gulp.task('clean:dist', function () {
     del.sync([
         paths.output
     ]);
-});
-
-// Remove pre-existing content from text folders
-gulp.task('clean:test', function () {
-    del.sync([
-        paths.test.coverage,
-        paths.test.results
-    ]);
-});
-
-// Run unit tests
-gulp.task('test:scripts', function() {
-    return gulp.src([paths.test.input].concat([paths.test.spec]))
-        .pipe(plumber())
-        .pipe(karma({ configFile: paths.test.karma }))
-        .on('error', function(err) { throw err; });
 });
 
 // Generate documentation
@@ -233,11 +199,7 @@ gulp.task('build:docs', ['compile', 'clean:docs'], function() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(tap(function (file, t) {
-            if ( /\.md|\.markdown/.test(file.path) ) {
-                return t.through(markdown);
-            }
-        }))
+
         .pipe(header(fs.readFileSync(paths.docs.templates + '/_header.html', 'utf8')))
         .pipe(footer(fs.readFileSync(paths.docs.templates + '/_footer.html', 'utf8')))
         .pipe(gulp.dest(paths.docs.output))
@@ -276,7 +238,6 @@ gulp.task('listen', function () {
 
 // Compile files
 gulp.task('compile', [
-    'lint:scripts',
     'clean:dist',
     'build:scripts',
     'build:styles',
@@ -303,10 +264,4 @@ gulp.task('default', [
 gulp.task('watch', [
     'listen',
     'default'
-]);
-
-// Run unit tests
-gulp.task('test', [
-    'default',
-    'test:scripts'
 ]);
