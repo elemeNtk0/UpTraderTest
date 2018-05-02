@@ -1,7 +1,11 @@
 /*!
- * gulp-boilerplate v4.2.3: My Gulp.js boilerplate for creating new web projects
- * (c) 2016 Chris Ferdinandi
+ * gulp-boilerplate v1.0.0: My Test Project for UpTrader
+ * (c) 2018 Alexander Senchenko
  * MIT License
- * http://github.com/cferdinandi/Plugin
+ * 
  */
 
+/* line 2, C:/work/Tests/UpTraderTest/src/sass/components/_myplugin.scss */
+body {
+  background: red;
+}
