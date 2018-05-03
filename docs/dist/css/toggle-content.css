@@ -1,0 +1,22 @@
+/*!
+ * gulp-boilerplate v1.0.0: My Test Project for UpTrader
+ * (c) 2018 Alexander Senchenko
+ * MIT License
+ * 
+ */
+
+/* line 4, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__article {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 10, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__article_is-opened {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}

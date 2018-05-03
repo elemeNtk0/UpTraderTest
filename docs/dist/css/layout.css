@@ -1,0 +1,45 @@
+/*!
+ * gulp-boilerplate v1.0.0: My Test Project for UpTrader
+ * (c) 2018 Alexander Senchenko
+ * MIT License
+ * 
+ */
+
+/* line 2, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  box-sizing: border-box;
+  background: #E9E8EF url("../img/bg_page.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  /* line 2, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+  body {
+    background: #BAA09E url("../img/bg_page_big.jpg") no-repeat top right/cover;
+  }
+}
+
+/* line 15, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+.container {
+  padding: 40px 20px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1220px;
+}
+
+@media (min-width: 768px) {
+  /* line 15, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+  .container {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}

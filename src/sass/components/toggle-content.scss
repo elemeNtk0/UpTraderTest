@@ -1,0 +1,18 @@
+.toggle-content {
+  
+
+  &__article {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    &_is-opened {
+      opacity: 1;
+      width: auto;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+}

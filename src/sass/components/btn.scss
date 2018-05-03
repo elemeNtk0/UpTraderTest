@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 4px;
+  overflow: visible;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 12px 25px 11px;
+
+  &__success {
+    background-color: #009E82;
+    font-weight: 500;
+  }
+}
