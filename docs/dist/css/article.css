@@ -8,21 +8,51 @@
 /* line 1, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article {
   background-color: #F3F2DA;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding: 20px;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
   /* line 1, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article {
-    margin-left: 0;
-    margin-right: 0;
     background-color: transparent;
   }
 }
 
-/* line 17, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 9, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+.article_trade {
+  background-image: url("../img/bg_article1.png");
+  background-position: bottom right;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  /* line 9, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  .article_trade {
+    background-image: url("../img/bg_article1_big.jpg");
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
+/* line 21, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+.article__inner {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 21, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  .article__inner {
+    width: 60%;
+    max-width: 700px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 35, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__text {
   color: #171717;
   font-size: 16px;
@@ -32,26 +62,26 @@
 }
 
 @media (min-width: 768px) {
-  /* line 17, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  /* line 35, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article__text {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
-/* line 29, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 47, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__text + .article__text {
   margin-top: 16px;
 }
 
 @media (min-width: 768px) {
-  /* line 29, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  /* line 47, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article__text + .article__text {
     margin-top: 18px;
   }
 }
 
-/* line 38, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 56, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__title {
   color: #171717;
   font-size: 24px;
@@ -61,21 +91,21 @@
 }
 
 @media (min-width: 768px) {
-  /* line 38, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  /* line 56, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article__title {
     margin-top: 40px;
     margin-bottom: 30px;
   }
 }
 
-/* line 52, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 70, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__list {
   counter-reset: myCounter;
   padding: 0;
   margin: 0 0 16px;
 }
 
-/* line 57, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 75, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__list li {
   list-style: none;
   position: relative;
@@ -88,20 +118,20 @@
   color: #1d1d1d;
 }
 
-/* line 68, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 86, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__list li:last-child {
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 57, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  /* line 75, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article__list li {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
-/* line 77, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 95, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__list li::before {
   counter-increment: myCounter;
   content: counter(myCounter);
@@ -116,13 +146,13 @@
   line-height: 1;
 }
 
-/* line 93, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+/* line 111, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
 .article__action-area {
   margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-  /* line 93, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
+  /* line 111, C:/work/Tests/UpTraderTest/src/sass/components/article.scss */
   .article__action-area {
     margin-top: 40px;
   }

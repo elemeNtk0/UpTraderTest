@@ -1,5 +1,12 @@
 .toggle-content {
   
+  &__menu {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
 
   &__article {
     opacity: 0;
@@ -12,6 +19,106 @@
       width: auto;
       height: auto;
       overflow: visible;
+      padding-top: 20px;
+      padding-bottom: 270px;
+      margin-bottom: 13px;
+
+      @media (min-width: 480px) {
+        padding-bottom: 320px;
+      }
+
+      @media (min-width: 556px) {
+        padding-bottom: 360px;
+      }
+
+      @media (min-width: 768px) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  &__link {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 68px;
+    background-color: rgba(#fff, 0.6);
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-size: 19px;
+    line-height: 22px;
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: rgba(#fff, 0.9);
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 12px;
+    }
+
+    
+
+    &::after {
+      content: "";
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 49px;
+      height: 11px;
+      background-image: url("../img/bg_toggle_down.png");
+      background-repeat: no-repeat;
+      background-position: center center; 
+    }
+
+    &_is-opened {
+      margin-bottom: 
+      &::after {
+        background-image: url("../img/bg_toggle_up.png");
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__link-text {
+
+  }
+
+
+  &__link-icon {
+    width: 74px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 74px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
     }
   }
 

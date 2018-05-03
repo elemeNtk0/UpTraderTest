@@ -18,9 +18,11 @@
   font-size: 18px;
   line-height: 20px;
   padding: 13px 25px 12px;
+  display: inline-block;
+  vertical-align: baseline;
 }
 
-/* line 14, C:/work/Tests/UpTraderTest/src/sass/components/btn.scss */
+/* line 16, C:/work/Tests/UpTraderTest/src/sass/components/btn.scss */
 .btn_success {
   background-color: #009E82;
   font-weight: 500;

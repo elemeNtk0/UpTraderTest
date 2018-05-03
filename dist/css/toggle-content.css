@@ -5,7 +5,20 @@
  * 
  */
 
-/* line 4, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+/* line 3, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* line 3, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+  .toggle-content__menu {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* line 11, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
 .toggle-content__article {
   opacity: 0;
   width: 0;
@@ -13,10 +26,144 @@
   overflow: hidden;
 }
 
-/* line 10, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+/* line 17, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
 .toggle-content__article_is-opened {
   opacity: 1;
   width: auto;
   height: auto;
   overflow: visible;
+  padding-top: 20px;
+  padding-bottom: 270px;
+  margin-bottom: 13px;
+}
+
+@media (min-width: 480px) {
+  /* line 17, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+  .toggle-content__article_is-opened {
+    padding-bottom: 320px;
+  }
+}
+
+@media (min-width: 556px) {
+  /* line 17, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+  .toggle-content__article_is-opened {
+    padding-bottom: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 17, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+  .toggle-content__article_is-opened {
+    padding-bottom: 20px;
+  }
+}
+
+/* line 41, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 47, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 68px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 19px;
+  line-height: 22px;
+  transition: background-color 0.25s ease-in-out;
+}
+
+/* line 69, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 73, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link:not(:first-of-type) {
+  margin-top: 12px;
+}
+
+/* line 79, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link::after {
+  content: "";
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 49px;
+  height: 11px;
+  background-image: url("../img/bg_toggle_down.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 91, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link_is-opened {
+  margin-bottom: .toggle-content__link_is-opened;
+}
+
+/* line 93, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link_is-opened ::after {
+  background-image: url("../img/bg_toggle_up.png");
+}
+
+@media (min-width: 768px) {
+  /* line 47, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+  .toggle-content__link {
+    display: none;
+  }
+}
+
+/* line 108, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link-icon {
+  width: 74px;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 74px;
+      flex-basis: 74px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* line 118, C:/work/Tests/UpTraderTest/src/sass/components/toggle-content.scss */
+.toggle-content__link-icon img {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
 }
