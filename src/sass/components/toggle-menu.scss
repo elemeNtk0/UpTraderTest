@@ -1,0 +1,111 @@
+.toggle-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &__item {
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(#fff, 0.6);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 50px;
+    width: 230px;
+    height: 230px;
+    flex-basis: 230px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.25s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      bottom: 8px;
+      left: 8px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: border-color 0.25s ease-in-out;
+    }
+
+    &:hover {
+      background-color: rgba(#fff, 0.5);
+
+      &::before {
+        border-color: #009e82;
+      }
+    }
+
+    @media (min-width: 960px) {
+      width: 280px;
+      height: 280px;
+      flex-basis: 280px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 320px;
+      height: 320px;
+      flex-basis: 320px;
+    }
+
+
+    @media (min-width: 1220px) {
+      width: 365px;
+      height: 365px;
+      flex-basis: 365px;
+    }
+  }
+  
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #242424;
+
+    @media (min-width: 960px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @media (min-width: 1220px) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+
+  &__icon {
+    width: 84px;
+    height: 84px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 15px;
+
+    @media (min-width: 960px) {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: 1220px) {
+      margin-bottom: 35px;
+    }
+
+    img {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+}

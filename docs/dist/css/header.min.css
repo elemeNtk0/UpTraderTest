@@ -1,2 +1,2 @@
 /*! gulp-boilerplate v1.0.0 | (c) 2018 Alexander Senchenko | MIT License |  */
-.header{text-align:center;margin-bottom:20px}@media (min-width:768px){.header{margin-bottom:70px}}.header__title{margin-bottom:0;font-size:36px;line-height:40px;color:#171717;font-weight:400}@media (min-width:768px){.header__title{font-size:48px;line-height:1}}
+.header{text-align:center;margin-bottom:20px}@media (min-width:768px){.header{margin-bottom:70px}}.header__title{margin-top:0;margin-bottom:0;font-size:36px;line-height:40px;color:#171717;font-weight:400}@media (min-width:768px){.header__title{font-size:48px;line-height:1}}
