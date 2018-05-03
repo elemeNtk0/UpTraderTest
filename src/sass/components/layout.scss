@@ -1,11 +1,14 @@
 // Add styles here...
 body {
-  background: red;
   font-family: $font-primary;
-}
+  box-sizing: border-box;
+  background: #E9E8EF url("../img/bg_page.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
 
-html {
-  max-width: 100%;
+  @media (min-width: 768px) {
+    background: #BAA09E url("../img/bg_page_big.jpg") no-repeat top right/cover;
+  }
 }
 
 .container {

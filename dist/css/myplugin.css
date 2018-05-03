@@ -22,16 +22,21 @@
 
 /* line 2, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
 body {
-  background: red;
   font-family: "PF DIN", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+  background: #E9E8EF url("../img/bg_page.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* line 7, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
-html {
-  max-width: 100%;
+@media (min-width: 768px) {
+  /* line 2, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+  body {
+    background: #BAA09E url("../img/bg_page_big.jpg") no-repeat top right/cover;
+  }
 }
 
-/* line 11, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+/* line 14, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
