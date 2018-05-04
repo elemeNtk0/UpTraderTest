@@ -7,21 +7,53 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   function mediaQuery(x) {
-    if (x.matches) {
-      desktopAccordion();
-    } else {
-      mobileAccordion();
-    }
+    x.matches ? desktopAccordion() : mobileAccordion();
   }
   
-  var x = window.matchMedia("(min-width: 480px)");
+  var x = window.matchMedia("(min-width: 768px)");
   mediaQuery(x);
   x.addListener(mediaQuery);
 
 
   function mobileAccordion() {
-    console.log("МОБАЙЛ ФЁРСТ, СУКА!");
+    var menuList = document.querySelectorAll(".toggle-content__link");
+    var articleList = document.querySelectorAll(".toggle-content__article");
+
+    var body = document.querySelector("body");
+
+    for (var i = 0; i < menuList.length; i++) {
+      menuList[i].addEventListener("click", function(e) {
+        e.preventDefault();
+
+        // Для setTimeOut
+        var $this = this;
+
+        var contentId = $this.getAttribute("data-href");
+        var contentIdGo = document.getElementById(contentId);
+
+        for (var j = 0; j < menuList.length; j++) {
+          menuList[j].classList.remove("toggle-content__link_is-opened");
+        }
+        
+        for (var k = 0; k < articleList.length; k++) {
+          articleList[k].classList.remove("toggle-content__article_is-opened");
+        }
+
+        function repeatActions() {
+          $this.classList.add("toggle-content__link_is-opened");
+          contentIdGo.classList.add("toggle-content__article_is-opened");
+        }
+        
+        if (!body.classList.contains("article-is-opened")) {
+          body.classList.add("article-is-opened");
+          repeatActions();
+        }
+        else repeatActions();
+      });
+    };
   }
+
+
 
   function desktopAccordion() {
     // console.log("Ну вот и декстопчик > 480");
@@ -35,9 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var toggleContent = document.querySelector(".toggle-content");
     var toggleContentMenu = document.querySelector(".toggle-content__menu");
     var toggleMenu = document.querySelector(".toggle-menu");
-    // console.log(header);
 
-    
 
     for (var i = 0; i < menuList.length; i++) {
       menuList[i].addEventListener("click", function(e) {

@@ -13,7 +13,6 @@
 
     @media (min-width: 768px) {
       display: flex;
-      
     }
 
     &_fixed {
@@ -58,17 +57,19 @@
     }
   }
 
-
   &__inner {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 
-    .article-is-opened & {
-      height: calc(100% - 115px);
-      margin-top: 115px;
-      // overflow-y: auto;
+    @media (min-width: 768px) {
+      .article-is-opened & {
+        height: calc(100% - 115px);
+        margin-top: 115px;
+        // overflow-y: auto;
+      }
     }
+
   }
 
   &__link {
@@ -101,8 +102,6 @@
       margin-top: 12px;
     }
 
-    
-
     &::after {
       content: "";
       margin-left: auto;
@@ -116,7 +115,6 @@
     }
 
     &_is-opened {
-      margin-bottom: 
       &::after {
         background-image: url("../img/bg_toggle_up.png");
       }
@@ -126,11 +124,6 @@
       display: none;
     }
   }
-
-  &__link-text {
-
-  }
-
 
   &__link-icon {
     width: 74px;
