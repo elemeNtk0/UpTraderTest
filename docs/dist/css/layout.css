@@ -39,8 +39,6 @@ body.article-is-opened {
   /* line 19, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
   .container {
     height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -50,7 +48,13 @@ body.article-is-opened {
   }
 }
 
-/* line 36, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+/* line 33, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+.container_aligned-top {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+/* line 38, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
 .main-content {
   padding-top: 40px;
   padding-bottom: 20px;
@@ -58,7 +62,7 @@ body.article-is-opened {
 }
 
 @media (min-width: 768px) {
-  /* line 36, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
+  /* line 38, C:/work/Tests/UpTraderTest/src/sass/components/layout.scss */
   .main-content {
     padding: 0;
     display: -ms-flexbox;

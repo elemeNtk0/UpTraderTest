@@ -4,6 +4,63 @@
   justify-content: space-between;
   box-sizing: border-box;
 
+  &_in-top {
+    
+
+    .toggle-menu {
+      &__item {
+        padding: 0;
+        border-radius: 0;
+        height: 114px;
+        background-color: transparent;
+
+        &:hover {
+          background-color: inherit;
+
+          &::after {
+            background-color: rgba(#009e82, 0.5);
+          }
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          position: absolute;
+          display: block;
+          content: "";
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-color: transparent;
+          transition: background-color 0.25s ease-in-out;
+        }
+
+        &_is-active {
+          &::after {
+            background-color: rgba(#009e82, 0.5);
+          }
+        }
+      }
+
+      &__text {
+        color: #242424;
+      }
+
+      &__item_is-active {
+        .toggle-menu__text {
+          color: #009e82;
+        }
+      }
+
+      &__icon {
+        display: none;
+      }
+    }
+  }
+
   &__item {
     box-sizing: border-box;
     border-radius: 50%;

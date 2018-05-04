@@ -15,7 +15,63 @@
   box-sizing: border-box;
 }
 
-/* line 7, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 11, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item {
+  padding: 0;
+  border-radius: 0;
+  height: 114px;
+  background-color: transparent;
+}
+
+/* line 17, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item:hover {
+  background-color: inherit;
+}
+
+/* line 20, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item:hover::after {
+  background-color: rgba(0, 158, 130, 0.5);
+}
+
+/* line 25, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item::before {
+  display: none;
+}
+
+/* line 29, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item::after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.25s ease-in-out;
+}
+
+/* line 42, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item_is-active::after {
+  background-color: rgba(0, 158, 130, 0.5);
+}
+
+/* line 48, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__text {
+  color: #242424;
+}
+
+/* line 53, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__item_is-active .toggle-menu__text {
+  color: #009e82;
+}
+
+/* line 58, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+.toggle-menu_in-top .toggle-menu__icon {
+  display: none;
+}
+
+/* line 64, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__item {
   box-sizing: border-box;
   border-radius: 50%;
@@ -41,7 +97,7 @@
   transition: background-color 0.25s ease-in-out;
 }
 
-/* line 25, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 82, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__item::before {
   content: "";
   position: absolute;
@@ -54,18 +110,18 @@
   transition: border-color 0.25s ease-in-out;
 }
 
-/* line 37, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 94, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__item:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 40, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 97, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__item:hover::before {
   border-color: #009e82;
 }
 
 @media (min-width: 960px) {
-  /* line 7, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 64, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__item {
     width: 280px;
     height: 280px;
@@ -75,7 +131,7 @@
 }
 
 @media (min-width: 1024px) {
-  /* line 7, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 64, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__item {
     width: 320px;
     height: 320px;
@@ -85,7 +141,7 @@
 }
 
 @media (min-width: 1220px) {
-  /* line 7, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 64, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__item {
     width: 365px;
     height: 365px;
@@ -94,7 +150,7 @@
   }
 }
 
-/* line 66, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 123, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__text {
   font-size: 16px;
   line-height: 20px;
@@ -103,7 +159,7 @@
 }
 
 @media (min-width: 960px) {
-  /* line 66, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 123, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__text {
     font-size: 18px;
     line-height: 22px;
@@ -111,7 +167,7 @@
 }
 
 @media (min-width: 1024px) {
-  /* line 66, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 123, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__text {
     font-size: 22px;
     line-height: 26px;
@@ -119,14 +175,14 @@
 }
 
 @media (min-width: 1220px) {
-  /* line 66, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 123, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__text {
     font-size: 26px;
     line-height: 30px;
   }
 }
 
-/* line 88, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 145, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__icon {
   width: 84px;
   height: 84px;
@@ -142,20 +198,20 @@
 }
 
 @media (min-width: 960px) {
-  /* line 88, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 145, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__icon {
     margin-bottom: 25px;
   }
 }
 
 @media (min-width: 1220px) {
-  /* line 88, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+  /* line 145, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
   .toggle-menu__icon {
     margin-bottom: 35px;
   }
 }
 
-/* line 106, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
+/* line 163, C:/work/Tests/UpTraderTest/src/sass/components/toggle-menu.scss */
 .toggle-menu__icon img {
   -ms-flex-negative: 0;
       flex-shrink: 0;

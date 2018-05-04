@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="dist/css/myplugin.css" type="text/css">
   </head>
 
-  <!-- <body class="article-is-opened"> -->
-  <body>
+  <body class="article-is-opened">
+  <!-- <body> -->
     <main class="main-content">
       
       <div class="header fadeOutUp animated">
@@ -20,10 +20,10 @@
       </div>
 
       <div class="toggle-content">
-        <div class="toggle-content__menu">
+        <div class="toggle-content__menu  toggle-content__menu_fixed">
           <div class="container">
-            <nav class="toggle-menu fadeOutUp animated">
-              <a href="trade.html" class="toggle-menu__item" data-href="content-1" target="_blank">
+            <nav class="toggle-menu toggle-menu_in-top">
+              <a href="trade.html" class="toggle-menu__item toggle-menu__item_is-active" data-href="content-1" target="_blank">
                 <span class="toggle-menu__icon">
                   <img src="../dist/img/bg_variant1.png" width="83" height="64" alt="" />
                 </span>
@@ -53,8 +53,8 @@
             </span>
             <span>Самостоятельно торговать</span>
           </a>
-          <article class="toggle-content__article toggle-content__article_is-openedddd article article_trade" id="content-1">
-            <div class="container">
+          <article class="toggle-content__article toggle-content__article_is-opened article article_trade fadeIn animated" id="content-1">
+            <div class="container container_aligned-top">
               <div class="article__inner">
                 <h2 class="visually-hidden">Самостоятельная торговля</h2>
     
