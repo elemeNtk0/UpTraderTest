@@ -1,2 +1,2 @@
 /*! gulp-boilerplate v1.0.0 | (c) 2018 Alexander Senchenko | MIT License |  */
-.animated{animation-duration:1s;animation-fill-mode:both}@keyframes a{0%{opacity:1}to{opacity:0;transform:translate3d(0,-500px,0)}}.fadeOutUp{animation-name:a}@keyframes b{0%{opacity:0}to{opacity:1}}.fadeIn{animation-name:b}
+.animated{animation-duration:1.5s;animation-fill-mode:both}.animated_delay{animation-duration:1s;animation-delay:2s;animation-fill-mode:both}@keyframes a{0%{opacity:1}to{opacity:0;transform:translate3d(0,-400px,0)}}.fadeOutUp{will-change:opacity,transform;animation-name:a}@keyframes b{0%{opacity:0}to{opacity:1}}.fadeIn{will-change:opacity;animation-name:b}

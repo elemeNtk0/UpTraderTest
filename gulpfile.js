@@ -132,7 +132,7 @@ gulp.task('build:styles', ['clean:dist'], function() {
         }))
         .pipe(flatten())
         .pipe(prefix({
-            browsers: ['last 2 version', '> 1%'],
+            browsers: ['last 5 version', '> 1%'],
             cascade: true,
             remove: true
         }))

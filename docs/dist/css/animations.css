@@ -7,7 +7,14 @@
 
 /* line 1, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
 .animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+/* line 5, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
+.animated_delay {
   animation-duration: 1s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 
@@ -17,12 +24,13 @@
   }
   to {
     opacity: 0;
-    transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -400px, 0);
   }
 }
 
-/* line 17, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
+/* line 21, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
 .fadeOutUp {
+  will-change: opacity, transform;
   animation-name: fadeOutUp;
 }
 
@@ -35,7 +43,8 @@
   }
 }
 
-/* line 31, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
+/* line 36, C:/work/Tests/UpTraderTest/src/sass/components/animations.scss */
 .fadeIn {
+  will-change: opacity;
   animation-name: fadeIn;
 }
